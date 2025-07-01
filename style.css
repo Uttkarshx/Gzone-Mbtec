@@ -63,7 +63,6 @@ nav a:hover {
   outline: none;
   background-color: white;
   color: #333;
-  z-index: 1;
 }
 
 .nav-search button {
@@ -86,24 +85,7 @@ nav a:hover {
   color: #ffd700;
 }
 
-
-/* Login/Sign Up buttons */
-.nav-auth {
-  display: flex;
-  gap: 15px;
-  margin-left: 20px;
-}
-
-.nav-auth a {
-  font-weight: 600;
-}
-
-.signup-btn {
-  color: #ffd700;
-}
-
-
-/*hero*/
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
@@ -113,7 +95,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-   color: #555;
+  color: #555;
 }
 
 .hero-overlay {
@@ -133,13 +115,11 @@ nav a:hover {
   border-radius: 10px;
 }
 
-
 /* Sections */
 .section {
   padding: 40px 20px;
   max-width: 1100px;
   margin: auto;
- 
 }
 
 /* Property Cards */
@@ -151,7 +131,7 @@ nav a:hover {
 }
 
 .property-card {
-  display: flex; /* Make layout horizontal */
+  display: flex;
   flex-direction: row;
   align-items: center;
   background-color: rgb(125, 136, 147);
@@ -162,18 +142,18 @@ nav a:hover {
 }
 
 .property-card img {
-  width: 40%; /* Image takes 40% width */
+  width: 40%;
   height: 100%;
   object-fit: cover;
 }
 
 .property-info {
-  width: 60%; /* Text takes 60% */
+  width: 60%;
   padding: 20px;
 }
 
 .property-info button {
-  margin-right: 10px; /* space between buttons */
+  margin-right: 10px;
 }
 
 .property-info button:hover {
@@ -194,9 +174,10 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-
 /* Forms */
-.form-section input, .form-section textarea, .form-section button {
+.form-section input,
+.form-section textarea,
+.form-section button {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -234,29 +215,19 @@ footer a:hover {
   color: white;
 }
 
-
+/* Misc */
 #logo {
-    height: 60px;
-    width: auto;
-    cursor: pointer;
+  height: 60px;
+  width: auto;
+  cursor: pointer;
 }
 
 #prop1 {
-height: 200px;
-width: 200px;
+  height: 200px;
+  width: 200px;
 }
 
-@media (max-width: 768px) {
-  .property-card {
-    flex-direction: column;
-  }
-  .property-card img,
-  .property-info {
-    width: 100%;
-  }
-}
-
-button{
+button {
   background-color: #0d0d0c;
   color: #f9f9f9;
   border: none;
@@ -266,10 +237,21 @@ button{
   cursor: pointer;
   transition: background-color 0.3s;
   transform: translateY(-2px);
-  cursor: pointer;
-    
 }
 
+/* Responsive Property Layout */
+@media (max-width: 768px) {
+  .property-card {
+    flex-direction: column;
+  }
+
+  .property-card img,
+  .property-info {
+    width: 100%;
+  }
+}
+
+/* Blog */
 .blog-posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -325,4 +307,109 @@ button{
 
 .view-all-btn:hover {
   background-color: #0f3460;
+}
+
+/* ========== Modal Styles ========== */
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.auth-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.auth-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.auth-tab {
+  margin: 10px 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.auth-tab.active {
+  background: #0f3460;
+  color: white;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.divider {
+  margin: 20px 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.google-login-btn,
+.facebook-login-btn {
+  background: #eee;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.google-login-btn i {
+  color: #db4437;
+}
+
+.facebook-login-btn i {
+  color: #3b5998;
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.terms-text a {
+  color: #0f3460;
+  text-decoration: underline;
+}
+
+.forgot-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #0f3460;
+  text-decoration: underline;
 }

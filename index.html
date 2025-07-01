@@ -5,23 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gzone Mbtec Properties</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <header>
     <h1>Gzone Mbtec Properties</h1>
     <p>Connecting Buyers, Sellers & Agents – Seamlessly</p>
-
   </header>
 
-
   <nav>
-    <img id="logo" src="GzoneLogo.png" alt="Logo">
-
+    <img id="logo" src="GzoneLogo.png" alt="Logo" />
     <a href="#home">Home</a>
     <a href="#properties">Properties</a>
     <a href="#agents">Agents</a>
@@ -29,27 +25,61 @@
     <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
 
-    <!-- Search Bar -->
     <div class="nav-search">
-      <input type="text" placeholder="Search property in your area">
+      <input type="text" placeholder="Search property in your area" />
       <button type="submit"><i class="fas fa-search"></i></button>
     </div>
 
-    <!-- Login/Sign Up -->
     <div class="nav-auth">
       <a href="#login">Login</a>
       <a href="#signup" class="signup-btn">Sign Up</a>
     </div>
   </nav>
 
+  <div id="authModal" class="auth-modal hidden">
+    <div class="auth-modal-content">
+      <span class="auth-close">&times;</span>
+      <div id="authTabs">
+        <button class="auth-tab active" onclick="showLogin()">Login</button>
+        <button class="auth-tab" onclick="showSignup()">Sign Up</button>
+      </div>
 
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form class="form-section">
+          <input type="tel" placeholder="Enter Phone Number" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Continue</button>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+          <div class="divider">OR</div>
+          <button class="google-login-btn" type="button">
+            <i class="fab fa-google"></i> Continue with Google
+          </button>
+          <button class="facebook-login-btn" type="button">
+            <i class="fab fa-facebook"></i> Continue with Facebook
+          </button>
+          <p class="terms-text">By clicking you agree to <a href="#">Terms and Conditions</a></p>
+        </form>
+      </div>
+
+      <div id="signupForm" class="hidden">
+        <h2>Sign Up</h2>
+        <form class="form-section">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <input type="password" placeholder="Create Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+          <button type="submit">Sign Up</button>
+          <p class="terms-text">By signing up, you agree to our <a href="#">Terms and Conditions</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="hero-overlay"></div>
-
   </section>
-
-
 
   <section class="section" id="properties">
     <h2>Featured Properties</h2>
@@ -61,16 +91,8 @@
           <p>₹34 Lakh • 500 sq.ft • Sector 05</p>
           <button><span>🔍</span> View Details</button>
           <button><span>📞</span> Contact Agent</button>
-
         </div>
       </div>
-      <!-- Repeat for more cards -->
-    </div>
-  </section>
-
-  <section class="section" id="properties">
-
-    <div class="properties">
       <div class="property-card">
         <img id="prop1" src="images/property2.jpg" alt="Property" />
         <div class="property-info">
@@ -78,16 +100,8 @@
           <p>₹50 Lakh • 800sq.ft • Sector 21</p>
           <button><span>🔍</span> View Details</button>
           <button><span>📞</span> Contact Agent</button>
-
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <section class="section" id="properties">
-
-    <div class="properties">
       <div class="property-card">
         <img id="prop1" src="images/Property3.jpeg" alt="Property" />
         <div class="property-info">
@@ -95,10 +109,8 @@
           <p>₹45 Lakh • 950 sq.ft • Sector 22</p>
           <button><span>🔍</span> View Details</button>
           <button><span>📞</span> Contact Agent</button>
-
         </div>
       </div>
-
     </div>
   </section>
 
@@ -129,32 +141,26 @@
   <section class="section" id="blog">
     <h2>Latest Insights</h2>
     <div class="blog-posts">
-
       <div class="blog-card">
         <h3>📄 5 Documents You Need Before Buying</h3>
         <p>Avoid legal mistakes with this must-have checklist for property buyers in India.</p>
         <a href="#">Read More →</a>
       </div>
-
       <div class="blog-card">
         <h3>📍 Top 3 Areas to Invest in Gurgaon (2025)</h3>
         <p>Discover upcoming sectors offering high ROI and strong infrastructure plans.</p>
         <a href="#">Read More →</a>
       </div>
-
       <div class="blog-card">
         <h3>🧠 Agent vs No-Agent: What’s Better?</h3>
         <p>Is it worth hiring a real estate agent? Pros, cons, and tips to decide.</p>
         <a href="#">Read More →</a>
       </div>
-
     </div>
-
     <div class="blog-button" style="text-align:center; margin-top: 30px;">
       <a href="#" class="view-all-btn">View All Insights</a>
     </div>
   </section>
-
 
   <section class="section" id="contact">
     <h2>Contact Us</h2>
@@ -173,18 +179,16 @@
       <a href="#" style="color:#ccc;">Terms & Conditions</a>
     </p>
     <p style="margin-top: 10px;">
-      <!-- Instagram -->
-      <a href="https://instagram.com/gzonembtechproperties" target="_blank"
-        style="color: #ccc; margin-right: 15px; font-size: 1.4em;">
+      <a href="https://instagram.com/gzonembtechproperties" target="_blank" style="color: #ccc; margin-right: 15px; font-size: 1.4em;">
         <i class="fab fa-instagram"></i>
       </a>
-      <!-- WhatsApp -->
       <a href="https://wa.me/919876543210" target="_blank" style="color: #ccc; font-size: 1.4em;">
         <i class="fab fa-whatsapp"></i>
       </a>
     </p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
